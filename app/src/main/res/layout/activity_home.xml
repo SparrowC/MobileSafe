@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8866ff00"
+        android:text="功能列表 "
+        android:gravity="center"
+        android:textSize="30dip"
+        android:textColor="#000000"/>
+    <com.kun.mobilesafe.ui.FocusedTextView
+        android:id="@+id/tvScrollText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="除了知识和学问之外，世上没有任何力量能在人的精神和心灵中，在人的思想、想象、见解和信仰中建立起统治和权威。——培根"
+        android:textSize="20dip"/>
+    <GridView
+        android:id="@+id/gvHomeGrid"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="20dp"
+        android:horizontalSpacing="8dp"></GridView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="updateURL">http://123.57.23.121:81/MobileSafe/updateURL.html</string>
+    <string name="updateInfo">updateInfo</string>
+    <string name="jsonVersion">version</string>
+    <string name="jsonDescribe">describe</string>
+    <string name="jsonDownload">downloadURL</string>
+</resources>

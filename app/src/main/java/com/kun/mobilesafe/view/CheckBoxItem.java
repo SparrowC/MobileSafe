@@ -1,7 +1,6 @@
-package com.kun.mobilesafe.ui;
+package com.kun.mobilesafe.view;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
@@ -98,5 +97,9 @@ public class CheckBoxItem extends RelativeLayout {
         } else {
             cbi_tvSettingCue.setText(mUncheckedCueText);
         }
+    }
+    public boolean isChecked()
+    {
+        return  cbi_checkbox.isChecked();
     }
 }

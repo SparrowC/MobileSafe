@@ -2,9 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="2"
     android:versionName="2.0"
+    android:installLocation="preferExternal"
     package="com.kun.mobilesafe" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
 
     <application
         android:allowBackup="true"
@@ -16,12 +28,52 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.WizardActivity"/>
+        <activity android:name=".activity.BurglarAlarmActivity"/>
+        <activity android:name=".activity.ContactActivity"/>
+        <activity android:name=".activity.CommunicationActivity"/>
+        <activity android:name=".activity.NumberAddressQueryActivity"/>
+        <activity android:name=".activity.BlackNumberActivity"/>
+        <activity android:name=".activity.AppManagerActivity"/>
+        <activity android:name=".activity.TaskManagerActivity"/>
+        <activity android:name=".activity.TaskSettingActivity"/>
+        <activity android:name=".activity.AdvancedToolActivity"/>
+        <activity android:name=".activity.SetLockPwdActivity"/>
+        <activity android:name=".activity.SetLockedAppActivity"/>
+        <activity android:name=".activity.EnterPwdActivityInSafe"/>
+        <activity android:name=".activity.AppGuardActivity"
+                  android:launchMode="singleInstance"/>
+        <activity android:name=".activity.AntiVirusActivity"
+                  android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+
+        <receiver android:name=".receiver.SIMChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SMSReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <!--<receiver android:name=".receiver.OutCallReceive">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.NEW_OUTGOING_CALL"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <service android:name=".service.NumberAddressQueryService"/>
+        <service android:name=".service.BlackNumberService"/>
+        <service android:name=".service.LockScreenCleanService"/>
+        <service android:name=".service.LockScreenCleanService"/>
+        <service android:name=".service.AppLockService"/>
+
     </application>
 
 </manifest>

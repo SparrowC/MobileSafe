@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="titleText" format="string"/>
     <declare-styleable name="CheckBoxItem">
-        <attr name="titleText" format="string"/>
+        <attr name="titleText"/>
         <attr name="uncheckedCueText" format="string"/>
         <attr name="checkedCueText" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="ChooseItem">
+        <attr name="titleText"/>
+        <attr name="defaultText" format="string"/>
     </declare-styleable>
 </resources>

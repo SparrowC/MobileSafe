@@ -1,8 +1,41 @@
 <resources>
     <string name="app_name">MobileSafe</string>
+    <string name="app_packageName">com.kun.mobilesafe</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!--SharedPreferences-->
+    <string name="sp_name">config</string>
+    <string name="sp_text_update">update</string>
+    <string name="sp_text_password">password</string>
+    <string name="sp_text_configured">configured</string>
+    <string name="sp_text_bind">bindSIM</string>
+    <string name="sp_text_sim_sn">bindSIM_SN</string>
+    <string name="sp_text_setPN">setPhoneNumber</string>
+    <string name="sp_text_open_alarm">openAlarm</string>
+    <string name="sp_text_bkg">ToastBKG</string>
+    <string name="sp_text_show_sys_task">showSysTask</string>
+    <string name="sp_text_app_lock_pwd">appLockPwd</string>
+    <string name="sp_text_start_app_lock_service">startAppLockService</string>
+    <string name="sp_text_register_screen_on_off_receiver">registerReceiver</string>
+
+
+    <string name="safe_pn">safeNumber</string>
+
+
+    <string name="GPS">#*location*#</string>
+    <string name="alarm">#*alarm*#</string>
+    <string name="wipeData">#*wipedata*#</string>
+    <string name="lockScreen">#*lockscreen*#</string>
+
+    <string-array name="wizard_pager_title">
+        <item>1.欢迎使用手机防盗</item>
+        <item>2.手机卡绑定</item>
+        <item>3.设置安全号码</item>
+        <item>4.恭喜你，设置完成</item>
+    </string-array>
+
 
     <string-array name="function_list_name">
         <item>手机防盗</item>
@@ -15,4 +48,28 @@
         <item>高级工具</item>
         <item>设置中心</item>
     </string-array>
+
+
+    <string name="NumberAddressQueryServiceName">com.kun.mobilesafe.service.NumberAddressQueryService</string>
+    <string name="BlackNumberServiceName">com.kun.mobilesafe.service.BlackNumberService</string>
+    <string name="LockScreenCleanService">com.kun.mobilesafe.service.LockScreenCleanService</string>
+
+    <string name="setBkgTitle">设置提示背景</string>
+    <string-array name="toast_bkgs">
+        <item>半透明</item>
+        <item>活力橙</item>
+        <item>卫视蓝</item>
+        <item>金属灰</item>
+        <item>苹果绿</item>
+    </string-array>
+
+    <!-- DB字符设置-->
+    <string name="BlackNumberTable_name">BlackNumber</string>
+    <string name="BN_ID">ID</string>
+    <string name="BN_number">number</string>
+    <string name="BN_name">name</string>
+    <string name="BN_mode">mode</string>
+
+    <string name="LockAppTable_name">LockApp</string>
+    <string name="LA_name">name</string>
 </resources>

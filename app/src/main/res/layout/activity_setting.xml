@@ -4,24 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#8866ff00"
-        android:text="功能列表 "
-        android:gravity="center"
-        android:textSize="30dip"
-        android:textColor="#000000"/>
-    <com.kun.mobilesafe.ui.FocusedTextView
-        android:id="@+id/tvScrollText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffff66"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:text="除了知识和学问之外，世上没有任何力量能在人的精神和心灵中，在人的思想、想象、见解和信仰中建立起统治和权威。——培根"
-        android:textSize="20dip"/>
-    <com.kun.mobilesafe.ui.CheckBoxItem
+
+    <com.kun.mobilesafe.view.CheckBoxItem
         android:id="@+id/cbi_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +13,34 @@
         custom:checkedCueText="已设置检测更新"
         custom:uncheckedCueText="已取消检测更新"
         >
-
-    </com.kun.mobilesafe.ui.CheckBoxItem>
+    </com.kun.mobilesafe.view.CheckBoxItem>
+    <com.kun.mobilesafe.view.CheckBoxItem
+        android:id="@+id/cbi_numberAddressQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="设置显示号码归属地"
+        custom:checkedCueText="已设置显示号码归属地"
+        custom:uncheckedCueText="已取消显示号码归属地"
+        />
+    <com.kun.mobilesafe.view.CheckBoxItem
+        android:id="@+id/cbi_blackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="设置启用黑名单"
+        custom:checkedCueText="已设置启用黑名单"
+        custom:uncheckedCueText="已设置关闭黑名单"
+        />
+    <com.kun.mobilesafe.view.ChooseItem
+        android:id="@+id/ci_address_bkg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="设置号码归属地提示背景"
+        custom:defaultText="无"/>
+    <!--<com.kun.mobilesafe.view.ChooseItem-->
+        <!--android:id="@+id/ci_address_style"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--custom:titleText="设置号码归属地提示风格"-->
+        <!--custom:defaultText="无"/>-->
 
 </LinearLayout>

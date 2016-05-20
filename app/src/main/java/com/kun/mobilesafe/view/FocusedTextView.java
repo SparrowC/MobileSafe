@@ -1,4 +1,4 @@
-package com.kun.mobilesafe.ui;
+package com.kun.mobilesafe.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

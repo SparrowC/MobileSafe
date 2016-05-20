@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res/com.kun.mobilesafe"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.kun.mobilesafe.view.CheckBoxItem
+        android:id="@+id/cbi_showSysTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:titleText="显示系统进程"
+        custom:checkedCueText="已设置"
+        custom:uncheckedCueText="未设置"/>
+    <com.kun.mobilesafe.view.CheckBoxItem
+        android:id="@+id/cbi_screenOffClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:titleText="锁屏清理进程"
+        custom:checkedCueText="已开启"
+        custom:uncheckedCueText="未开启"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIM卡发生变更后\n报警短信会发送给安全号码"
+            android:textColor="#333333"
+            android:textSize="25dp"/>
+        <EditText
+            android:id="@+id/et_safe_pn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="20dp"
+            android:hint="请输入安全号码"/>
+        <Button
+            android:id="@+id/btn_selectContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择联系人"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/phone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

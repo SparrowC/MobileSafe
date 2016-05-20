@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_mouldTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8866ff00"
+            android:text="黑名单 "
+            android:gravity="center"
+            android:textSize="30dip"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/iv_addBlackNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_image_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <com.kun.mobilesafe.view.FocusedTextView
+        android:id="@+id/tvScrollText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="除了知识和学问之外，世上没有任何力量能在人的精神和心灵中，在人的思想、想象、见解和信仰中建立起统治和权威。——培根"
+        android:textSize="20dip"/>
+    <ListView
+        android:id="@+id/lv_blackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp" >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_scanner_malware" />
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/act_scanning_03" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在扫描"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:layout_gravity="center_horizontal"/>
+            <!--<com.kun.mobilesafe.view.SnailBar-->
+                <!--android:id="@+id/sb_progress"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:thumb="@anim/snailanim"-->
+                <!--android:clickable="false"-->
+                <!--/>-->
+            <ProgressBar
+                android:id="@+id/sb_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/my_pb_style"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_scanningInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+</LinearLayout>

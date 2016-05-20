@@ -2,6 +2,7 @@ package com.kun.mobilesafe.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -13,12 +14,17 @@ import android.widget.TextView;
 import com.kun.mobilesafe.activity.base.BaseActivity;
 import com.kun.mobilesafe.R;
 import com.kun.mobilesafe.beans.UpdateBean;
+import com.kun.mobilesafe.database.LockAppDBDAO;
 import com.kun.mobilesafe.utils.HTTPUtils;
 import com.kun.mobilesafe.utils.JsonUtils;
+import com.kun.mobilesafe.utils.ServiceUtils;
 
 import org.json.JSONException;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class SplashActivity extends BaseActivity {
 
@@ -91,7 +97,9 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         initWidget();
         initListener();
-        if(sp.getBoolean("update",true))
+        copyDB("address.db");
+        copyDB("antivirus.db");
+        if(sp.getBoolean(getString(R.string.sp_text_update),false))
             CheckUpdate();
         else {
             mHandler.postDelayed(new Runnable() {
@@ -101,6 +109,7 @@ public class SplashActivity extends BaseActivity {
                 }
             }, 1000);
         }
+
     }
     private void CheckUpdate()
     {
@@ -137,6 +146,31 @@ public class SplashActivity extends BaseActivity {
             }
         }).start();
     }
+
+    /**
+     * copy to file path="data/data/com.kun.mobilesafe/files/address.db";
+     */
+    private void copyDB(String fileName)
+    {
+        try {
+            File file =new File(getFilesDir(),fileName);
+            if(file.exists()&&file.length()>0)
+                return;
+            InputStream is=getAssets().open(fileName);
+
+            FileOutputStream fos=new FileOutputStream(file);
+            byte[] buffer=new byte[1024];
+            int len=0;
+            while ((len=is.read(buffer))!=-1)
+            {
+                fos.write(buffer,0,len);
+            }
+            is.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     protected void initWidget() {
         tvVersionCtrl= (TextView) findViewById(R.id.tvVersionCtrl);
@@ -160,4 +194,6 @@ public class SplashActivity extends BaseActivity {
            return name;
        }
    }
+
+
 }
